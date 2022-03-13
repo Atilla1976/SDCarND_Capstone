@@ -58,11 +58,11 @@ class DBWNode(object):
                                      fuel_capacity=fuel_capacity,
                                      brake_deadband=brake_deadband,
                                      decel_limit=decel_limit,
-                                     accel_limit=cel_limit
+                                     accel_limit=accel_limit,
                                      wheel_radius=wheel_radius,
                                      wheel_base=wheel_base,
                                      steer_ratio=steer_ratio,
-                                     max_lat_accel=max_lat_accel
+                                     max_lat_accel=max_lat_accel,
                                      max_steer_angle=max_steer_angle)
 
         # TODO: Subscribe to all the topics you need to
@@ -78,7 +78,7 @@ class DBWNode(object):
         self.throttle = self.steering = self.brake = 0        
 
         self.loop()
-
+        
     def loop(self):
         rate = rospy.Rate(50) # 50Hz
         while not rospy.is_shutdown():
@@ -90,7 +90,7 @@ class DBWNode(object):
                                                                                    self.linear_vel,
                                                                                    self.angular_vel)
                                                                                              
-            if self.dbw_enabled>:
+            if self.dbw_enabled:
                 self.publish(self.throttle, self.brake, self.steering)
             rate.sleep()
             
