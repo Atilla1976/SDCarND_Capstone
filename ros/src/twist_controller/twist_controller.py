@@ -40,7 +40,7 @@ class Controller(object):
         
         
         if not dbw_enabled:
-            self.throttle controller.reset()
+            self.throttle_controller.reset()
             return 0., 0., 0.
         
         current_vel = self.vel_lpf.filt(current_vel)
@@ -73,5 +73,3 @@ class Controller(object):
             brake = abs(decel)*self.vehicle_mass*self.wheel_radius # Torque N*m
             
         return throttle, brake, steering
-            
-        return 1., 0., 0.
