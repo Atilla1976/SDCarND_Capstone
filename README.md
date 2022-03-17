@@ -29,10 +29,16 @@ I built both a traffic light detection node and a traffic light classification n
 
 ### /ros/src/waypoint_updater/
 This package contains the waypoint updater node: waypoint_updater.py. The purpose of this node is to update the target velocity property of each waypoint based on traffic light and obstacle detection data. This node will subscribe to the /base_waypoints, /current_pose, /obstacle_waypoint, and /traffic_waypoint topics, and publish a list of waypoints ahead of the car with target velocities to the /final_waypoints topic.
- 
+
+[image3]: ./imgs/waypointUpdater.png "waypointUpdater"
+![alt text][image3]
+
 ### /ros/src/twist_controller/
 Carla is equipped with a drive-by-wire (dbw) system, meaning the throttle, brake, and steering have electronic control. This package contains the files that are responsible for control of the vehicle: the node dbw_node.py and the file twist_controller.py, along with a pid and lowpass filter that you can use in your implementation. The dbw_node subscribes to the /current_velocity topic along with the /twist_cmd topic to receive target linear and angular velocities. Additionally, this node will subscribe to /vehicle/dbw_enabled, which indicates if the car is under dbw or driver control. This node will publish throttle, brake, and steering commands to the /vehicle/throttle_cmd, /vehicle/brake_cmd, and /vehicle/steering_cmd topics.
- 
+
+[image4]: ./imgs/dbw.png "dbw"
+![alt text][image4]
+
 In addition to these packages you will find the following. The styx and styx_msgs packages are used to provide a link between the simulator and ROS, and to provide custom ROS message types:
 •	(path_to_project_repo)/ros/src/styx/ A package that contains a server for communicating with the simulator, and a bridge to translate and publish simulator messages to ROS topics.
 •	(path_to_project_repo)/ros/src/styx_msgs/ A package which includes definitions of the custom ROS message types used in the project.
