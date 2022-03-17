@@ -1,6 +1,6 @@
 # SDCarND_Capstone
 
-Here you can see an excerpt of the final simulation:
+Here you can see an excerpt of the final simulation:<br>
 ![](imgs/anim7.gif)
 
 ## Self-Driving-Car_System-Integration
