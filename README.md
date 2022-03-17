@@ -41,10 +41,10 @@ Carla is equipped with a drive-by-wire (dbw) system, meaning the throttle, brake
 ![alt text][image4]
 
 In addition to these packages you will find the following. The styx and styx_msgs packages are used to provide a link between the simulator and ROS, and to provide custom ROS message types:
-  - (path_to_project_repo)/ros/src/styx/ A package that contains a server for communicating with the simulator, and a bridge to translate and publish simulator messages to ROS topics.
-  - (path_to_project_repo)/ros/src/styx_msgs/ A package which includes definitions of the custom ROS message types used in the project.
-  - (path_to_project_repo)/ros/src/waypoint_loader/ A package which loads the static waypoint data and publishes to /base_waypoints.
-  - (path_to_project_repo)/ros/src/waypoint_follower/ A package containing code from Autoware which subscribes to /final_waypoints and publishes target vehicle linear and angular velocities in the form of twist commands to the /twist_cmd topic.
+  - `(path_to_project_repo)/ros/src/styx/` A package that contains a server for communicating with the simulator, and a bridge to translate and publish simulator messages to ROS topics.
+  - `(path_to_project_repo)/ros/src/styx_msgs/` A package which includes definitions of the custom ROS message types used in the project.
+  - `(path_to_project_repo)/ros/src/waypoint_loader/` A package which loads the static waypoint data and publishes to /base_waypoints.
+  - `(path_to_project_repo)/ros/src/waypoint_follower/` A package containing code from Autoware which subscribes to /final_waypoints and publishes target vehicle linear and angular velocities in the form of twist commands to the /twist_cmd topic.
   - 
 ## Usage
 
@@ -54,8 +54,8 @@ In addition to these packages you will find the following. The styx and styx_msg
 `cd CarND-Capstone`
 `pip install -r requirements.txt`
 3.	Make and run styx<br>
-`cd ros`
-`catkin_make`
-`source devel/setup.sh`
+`cd ros`<br>
+`catkin_make`<br>
+`source devel/setup.sh`<br>
 `roslaunch launch/styx.launch`
 4.	Run the simulator
