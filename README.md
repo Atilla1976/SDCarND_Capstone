@@ -6,7 +6,7 @@ Here you can see an excerpt of the final simulation:<br><br>
 ## Self-Driving-Car_System-Integration
 Using ROS to program a self-driving car.
 
-Note: This project does not include a neural network traffic light detection. The traffic light detection is using simulator ground truth detected.
+**Note:** This project does not include a neural network traffic light detection. The traffic light detection is using simulator ground truth detected.
 
 
 ## System Architecture Diagram
@@ -16,11 +16,12 @@ The following is a system architecture diagram showing the ROS nodes and topics 
 ![alt text][image1]
 
 Twist commands that the DBW Node subscribes to are basically linear and angular accelerations.
+
 ## Code Structure
 
 The code is contained entirely within the (path_to_project_repo)/ros/src/ directory. Within this directory, you will find the following ROS packages:
 ### /ros/src/tl_detector/
-This package contains the traffic light detection node: tl_detector.py. This node takes in data from the /image_color, /current_pose, and /base_waypoints topics and publishes the locations to stop for red traffic lights to the /traffic_waypoint topic.
+This package contains the traffic light detection node: `tl_detector.py`. This node takes in data from the /image_color, /current_pose, and /base_waypoints topics and publishes the locations to stop for red traffic lights to the /traffic_waypoint topic.
 The /current_pose topic provides the vehicle's current position, and /base_waypoints provides a complete list of waypoints the car will be following.
 I built both a traffic light detection node and a traffic light classification node. Traffic light detection takes place within tl_detector.py, whereas traffic light classification takes place within ../tl_detector/light_classification_model/tl_classfier.py. 
 
