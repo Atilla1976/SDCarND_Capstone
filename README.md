@@ -1,7 +1,7 @@
 # SDCarND_Capstone
 
 Here you can see an excerpt of the final simulation:
-![](imgs/Animation.gif)
+![](imgs/anim7.gif)
 
 ## Self-Driving-Car_System-Integration
 Using ROS to program a self-driving car.
